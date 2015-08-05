@@ -1,7 +1,6 @@
 Globelabs, PHP Wrapper Globelabs
 =======================
 
-[![Build Status](https://github.com/rsupan/globelabs?branch=master)](https://github.com/rsupan/globelabs)
 - Simple PHP Wrapper for Globelabs SMS and Charging API
 
 ```php
