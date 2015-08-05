@@ -1,5 +1,5 @@
 {
-    "name": "rsupan:/globelabs",
+    "name": "rsupan/globelabs",
     "description": "Composer Package for GlobeLabs",
     "authors": [
         {
