@@ -1,5 +1,7 @@
 {
     "name": "rsupan/globelabs",
+    "version": "dev-master",
+    "minimum-stability": "dev-master",
     "description": "Composer Package for GlobeLabs",
     "authors": [
         {
