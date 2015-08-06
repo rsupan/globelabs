@@ -14,6 +14,6 @@ class SMS extends Connection {
 			->body("{\"message\":\"" . $options["message"] . "\",\"address\":\"" . $options["address"] . "\"}")
 			->sendIt();
 
-		return $response;
+		return (array) json_decode($response->raw_body);
 	}
 }
