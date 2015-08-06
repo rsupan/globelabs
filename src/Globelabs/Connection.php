@@ -7,6 +7,7 @@ namespace Globelabs;
 class Connection {
 	private static $base_uri = 'https://devapi.globelabs.com.ph';
 	private static $uri;
+
 	# Construct the connection url for GLobelabs API
 	public static function Construct($sender_address = '', $access_token, $code) {
 		if ($code == 1) {

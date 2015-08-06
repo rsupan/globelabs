@@ -4,12 +4,14 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Globelabs\Charging;
 
 $options = [
-	'amount' => '1',
+	'amount' => '0.00',
 	'description' => 'Allowance',
-	'msisdn' => '0906xxxxxxx',
+	'msisdn' => '906xxxxxxxx',
 	'transactionOperationStatus' => 'Charged',
-	'reference_code' => '13420000001',
-	'access_token' => '{your_access_token}',
+	'reference_code' => '{reference_code_see_documentation}',
+	'access_token' => '{access_token}',
 ];
 
 var_dump(Charging::charge_to($options));
+
+?>

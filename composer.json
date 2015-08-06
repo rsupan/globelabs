@@ -1,8 +1,9 @@
 {
     "name": "rsupan/globelabs",
     "keywords":["Globelabs"],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Composer Package for GlobeLabs",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Rey Supan",
@@ -23,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1-dev"
+            "dev-master": "0.0.3-dev"
         }
     }
 }
