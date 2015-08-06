@@ -2,18 +2,13 @@
 namespace Globelabs;
 
 /**
- * SMS
+ * GLobelabs SMS API
  */
 
 class SMS extends Connection {
 	public static function send_to($options) {
-		$uri = parent::$base_uri . '/smsmessaging/v1/outbound/' . $options['sender_address'] . '/requests?access_token=' . $options['access_token'];
-		$response = \Httpful\Request::post($uri)
-			->sendsJson()
-			->expectsJson()
-			->body("{\"message\":\"" . $options["message"] . "\",\"address\":\"" . $options["address"] . "\"}")
-			->sendIt();
+		Connection::Construct($options['sender_address'], $options['access_token'], 1);
 
-		return (array) json_decode($response->raw_body);
+		return $response = Connection::send_to($options);
 	}
 }
