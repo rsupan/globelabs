@@ -5,6 +5,8 @@ Globelabs, PHP Wrapper Globelabs
 
 ## Usage
 
+## SMS API
+
 ```php
   <?php
     require_once __DIR__ . '/../vendor/autoload.php';
@@ -18,13 +20,32 @@ Globelabs, PHP Wrapper Globelabs
       'address' => '0906xxxxxxx',
     ];
 
-    echo SMS::send_to($options);
+    var_dump(SMS::send_to($options));
+  ?>
+```
 
+## Charging API
+
+```php
+  <?php
+    require_once __DIR__ . '/../vendor/autoload.php';
+
+    use Globelabs\Charging;
+    $options = [
+      'amount' => '1',
+      'description' => 'Allowance',
+      'msisdn' => '0906xxxxxxx',
+      'transactionOperationStatus' => 'Charged',
+      'reference_code' => '13420000001',
+      'access_token' => '{your_access_token}',
+    ];
+
+    var_dump(Charging::charge_to($options));
   ?>
 ```
 
 ## Help and docs
-
+  [Globelabs API Documentation](http://www.globelabs.com.ph/docs).
 
 ## Installing Globelabs
 
@@ -33,26 +54,23 @@ The recommended way to install Globelabs is through
 
 ```bash
 # Install Composer
-curl -sS https://getcomposer.org/installer | php
+  curl -sS https://getcomposer.org/installer | php
 ```
 
 Next, run the Composer command to install the latest stable version of Globelabs:
 
 ```bash
-composer.phar require rsupan/globelabs
+  composer.phar require rsupan/globelabs
 ```
 
 After installing, you need to require Composer's autoloader:
 
 ```php
-require 'vendor/autoload.php';
+  require 'vendor/autoload.php';
 ```
 
 You can then later update Globelabs using composer:
 
  ```bash
-composer.phar update
+  composer.phar update
  ```
-
-
-## Version Guidance
