@@ -10,6 +10,7 @@ class SMS extends Connection {
 		$uri = parent::$base_uri . '/smsmessaging/v1/outbound/' . $options['sender_address'] . '/requests?access_token=' . $options['access_token'];
 		$response = \Httpful\Request::post($uri)
 			->sendsJson()
+			->expectsJson()
 			->body("{\"message\":\"" . $options["message"] . "\",\"address\":\"" . $options["address"] . "\"}")
 			->sendIt();
 
