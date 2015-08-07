@@ -1,4 +1,4 @@
-Globelabs, PHP Wrapper Globelabs v 0.0.4
+Globelabs, PHP Wrapper Globelabs v 0.0.5
 =======================
 
 - Simple PHP Wrapper for Globelabs SMS and Charging API
@@ -62,14 +62,14 @@ The recommended way to install Globelabs is through
 Next, run the Composer command to install the latest stable version of Globelabs:
 
 ```bash
-  composer.phar require rsupan/globelabs 0.0.4
+  composer.phar require rsupan/globelabs 0.0.5
 ```
 
 or add
 
 ```php
   "require": {
-        "rsupan/globelabs": "0.0.4"
+        "rsupan/globelabs": "0.0.5"
     }
 ```
 to your composer.json file
