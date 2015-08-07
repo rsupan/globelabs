@@ -50,7 +50,7 @@ class Connection {
 		return self::parse_response($response);
 	}
 
-	private function parse_response($response = '') {
+	private static function parse_response($response = '') {
 		if (!json_decode($response->raw_body)) {
 			return $response = [
 				'error' => '500',
